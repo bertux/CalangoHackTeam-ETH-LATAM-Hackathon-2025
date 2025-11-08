@@ -17,7 +17,7 @@ export const NFTCard = ({ nft, transfer }: { nft: Collectible; transfer?: boolea
         {/* eslint-disable-next-line  */}
         <img src={nft.image} alt="NFT Image" className="h-60 min-w-full" />
         <figcaption className="glass absolute bottom-4 left-4 p-4 w-25 rounded-xl">
-          <span className="text-white "># {nft.id}</span>
+          <span className="text-green-700 "># {nft.id}</span>
         </figcaption>
       </figure>
       <div className="card-body space-y-3">
