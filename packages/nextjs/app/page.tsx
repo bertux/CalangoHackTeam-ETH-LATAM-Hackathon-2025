@@ -39,7 +39,7 @@ const Home: NextPage = () => {
               <p>
                 Tinker with your smart contract using the{" "}
                 <Link href="/erc721" passHref className="link">
-                  ERC-721
+                  NFT Minter
                 </Link>{" "}
                 tab.
               </p>
