@@ -23,9 +23,9 @@ const ERC721: NextPage = () => {
           <h1 className="text-4xl font-bold">ERC-721 NFT</h1>
           <div>
             <p>
-              This extension introduces an ERC-721 token contract and demonstrates how to use it, including getting the
-              total supply and holder balance, listing all NFTs from the collection and NFTs from the connected address,
-              and how to transfer NFTs.
+              This app introduces an ERC-721 token contract and demonstrates how to use it, including getting the total
+              supply and holder balance, listing all NFTs from the collection and NFTs from the connected address, and
+              how to transfer NFTs.
             </p>
             <p>
               The ERC-721 Token Standard introduces a standard for Non-Fungible Tokens (
@@ -58,12 +58,7 @@ const ERC721: NextPage = () => {
               >
                 ERC-721 Enumerable extension
               </a>{" "}
-              from OpenZeppelin to list all tokens from the collection and all the tokens owned by an address. You can
-              remove this if you plan to use an indexer, like a Subgraph or Ponder (
-              <a target="_blank" href="https://scaffoldeth.io/extensions" className="underline font-bold text-nowrap">
-                extensions available
-              </a>
-              ).
+              from OpenZeppelin to list all tokens from the collection and all the tokens owned by an address.
             </p>
           </div>
 
@@ -76,10 +71,6 @@ const ERC721: NextPage = () => {
             <p>
               You can see your balance and your NFTs, and below that, you can see the total supply and all the NFTs
               minted.
-            </p>
-            <p>
-              Check the code under <em>packages/nextjs/app/erc721</em> to learn more about how to interact with the
-              ERC721 contract.
             </p>
           </div>
         </div>
