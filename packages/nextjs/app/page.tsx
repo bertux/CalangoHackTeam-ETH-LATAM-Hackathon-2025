@@ -47,7 +47,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
               <p>
-                Explore your transactions with the{" "}
+                Explore your transactions using the{" "}
                 <Link
                   href="https://sepolia.arbiscan.io/token/0xD478eAE947eAB74bcaB279b53f765da71f660546"
                   passHref
