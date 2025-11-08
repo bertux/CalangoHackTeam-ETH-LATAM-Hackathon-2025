@@ -1,127 +1,128 @@
 # 🪶 Trust Capsule
 
-**Protocolo de Confiança Verificável para a Nova Era das Relações Digitais**
+**A Verifiable Trust Protocol for the New Era of Digital Relationships**
 
-O **Trust Capsule** é um protocolo experimental desenvolvido para registrar, verificar e proteger interações digitais entre agentes, humanos e sistemas automatizados na Web3.
-Sua função é simples e essencial: **transformar confiança em um ativo verificável**.
-
----
-
-## 🌐 Visão Geral
-
-O **Trust Capsule** atua como uma _cápsula de confiança_, armazenando evidências imutáveis de ações, decisões, acordos e reputações.
-Ele combina dados **on-chain** (registros criptográficos) e **off-chain** (contexto, intenções e metadados), garantindo rastreabilidade, integridade e interoperabilidade.
-
-O objetivo é criar um padrão aberto para confiança digital — aplicável tanto a **DAOs**, **dApps** e **sistemas de governança**, quanto a organizações que desejam operar com transparência verificável.
+**Trust Capsule** is an experimental protocol developed to record, verify, and protect digital interactions between agents, humans, and automated systems on Web3.
+Its function is simple and essential: **to transform trust into a verifiable asset**.
 
 ---
 
-## ⚙️ Arquitetura Técnica
+## 🌐 Overview
 
-O sistema é dividido em três camadas interdependentes:
+**Trust Capsule** acts as a _trust capsule_, storing immutable evidence of actions, decisions, agreements, and reputations.
+It combines **on-chain** data (cryptographic records) and **off-chain** data (context, intentions, and metadata), ensuring traceability, integrity, and interoperability.
 
-### 1. Camada de Registro (On-chain)
-
-- Gera hashes das evidências em redes compatíveis com **EVM** (Ethereum, Arbitrum, Base, Polygon).
-- Usa padrões **ERC-721** para criação de cápsulas NFT (Trust Capsules).
-- Registra tempo, origem e integridade da interação.
-
-### 2. Camada de Contexto (Off-chain)
-
-- Armazena metadados e informações contextuais via **IPFS** ou **Arweave**.
-- Descreve o propósito, autoria e natureza da ação ou acordo.
-- Mantém privacidade seletiva (dados sensíveis não expostos publicamente).
-
-### 3. Camada de Reputação
-
-- Consolida evidências e interações em um **Trust Score** dinâmico.
-- Pode emitir _Trust Badges_ (NFTs de reputação) baseados em comportamento e verificações.
-- Integra-se com protocolos de governança (Snapshot, Tally, Safe).
+The goal is to create an open standard for digital trust—applicable to **DAOs**, **dApps**, and **governance systems**, as well as organizations that wish to operate with verifiable transparency.
 
 ---
 
-## 💡 Problema que Resolve
+## ⚙️ Technical Architecture
 
-Mesmo em sistemas descentralizados, a confiança entre partes ainda depende de interpretação subjetiva.
-O **Trust Capsule** elimina essa lacuna ao introduzir uma camada objetiva e verificável de confiança, resolvendo:
+The system is divided into three interdependent layers:
 
-- Baixa rastreabilidade de intenções e autorias;
-- Falta de métricas reputacionais consistentes;
-- Desconexão entre contexto (off-chain) e registro (on-chain).
+### 1. Registration Layer (On-chain)
 
----
+- Generates hashes of evidence on **EVM**-compatible networks (Ethereum, Arbitrum, Base, Polygon).
+- Uses **ERC-721** standards for creating NFT capsules (Trust Capsules).
+- Records the time, origin, and integrity of the interaction.
 
-## 🧩 Casos de Uso
+### 2. Context Layer (Off-chain)
 
-- **Governança Descentralizada:** registro verificável de votos, decisões e quóruns.
-- **Colaborações Web3:** evidência de entregas, coautorias e contribuições.
-- **Projetos ESG e impacto:** rastreabilidade de compromissos e indicadores sustentáveis.
-- **Sistemas reputacionais:** criação de NFTs de confiança e histórico de interações.
-- **Letramento digital:** certificações de participação e aprendizado verificáveis.
+- Stores metadata and contextual information via **IPFS** or **Arweave**.
+- Describes the purpose, authorship, and nature of the action or agreement.
+- Maintains selective privacy (sensitive data is not publicly exposed).
 
----
+### 3. Reputation Layer
 
-## 🧭 Pilares Éticos e Sustentáveis
-
-O Trust Capsule segue integralmente os princípios **ESG**, **ODS** e **NetZero**, com compromisso de:
-
-- Transparência e interoperabilidade;
-- Neutralidade de carbono em infraestrutura (via Arweave/Polygon Green);
-- Governança aberta e participativa;
-- Código sob licença livre, auditável e replicável.
+- Consolidates evidence and interactions into a dynamic **Trust Score**.
+- Can issue _Trust Badges_ (reputation NFTs) based on behavior and verifications.
+- Integrates with governance protocols (Snapshot, Tally, Safe).
 
 ---
 
-## 🔐 Estrutura do Repositório
+## 💡 The Problem It Solves
+
+Even in decentralized systems, trust between parties still depends on subjective interpretation.
+**Trust Capsule** bridges this gap by introducing an objective and verifiable layer of trust, solving:
+
+- Low traceability of intentions and authorship;
+- Lack of consistent reputational metrics;
+- Disconnection between context (off-chain) and registration (on-chain).
+
+---
+
+## 🧩 Use Cases
+
+- **Decentralized Governance:** verifiable recording of votes, decisions, and quorums.
+- **Web3 Collaborations:** evidence of deliverables, co-authorships, and contributions.
+- **ESG and Impact Projects:** traceability of commitments and sustainable indicators.
+- **Reputation Systems:** creation of trust NFTs and interaction history.
+- **Digital Literacy:** verifiable certifications of participation and learning.
+
+---
+
+## 🧭 Ethical and Sustainable Pillars
+
+Trust Capsule fully adheres to **ESG**, **SDG**, and **NetZero** principles, with a commitment to:
+
+- Transparency and interoperability;
+- Carbon neutrality in infrastructure (via Arweave/Polygon Green);
+- Open and participatory governance;
+- Code under a free, auditable, and replicable license.
+
+---
+
+## 🔐 Repository Structure
 
 trust-capsule/
 │
-├── contracts/ # Contratos Solidity (ERC721 / TrustLogic)
-├── core/ # Módulos de validação e lógica off-chain
-├── api/ # Endpoints de integração (Node.js / FastAPI)
-├── ui/ # Interface de visualização e dashboard reputacional
-├── docs/ # Documentação técnica e diagramas
-├── tests/ # Testes unitários e de integração
-└── README.md # Este documento
+├── contracts/ # Solidity Contracts (ERC721 / TrustLogic)
+├── core/ # Validation modules and off-chain logic
+├── api/ # Integration endpoints (Node.js / FastAPI)
+├── ui/ # Visualization interface and reputation dashboard
+├── docs/ # Technical documentation and diagrams
+├── tests/ # Unit and integration tests
+└── README.md # This document
 
 ---
 
-## 🛠️ Stack Técnica
+## 🛠️ Tech Stack
 
-| Camada          | Tecnologia                 | Função                                    |
+| Layer | Technology | Function |
 | --------------- | -------------------------- | ----------------------------------------- |
-| Blockchain      | Ethereum / Arbitrum / Base | Registro de cápsulas                      |
-| Storage         | IPFS / Arweave             | Armazenamento descentralizado             |
-| Backend         | Node.js / TypeScript       | API e integração com oráculos             |
-| Smart Contracts | Solidity (OpenZeppelin)    | Módulos on-chain                          |
-| Frontend        | React + Tailwind + Wagmi   | Dashboard de reputação                    |
-| Automação       | n8n                        | Fluxos de emissão, validação e governança |
-| Identidade      | ENS / DID / Lens Protocol  | Vinculação de identidade descentralizada  |
+| Blockchain | Ethereum / Arbitrum / Base | Capsule registration |
+| Storage | IPFS / Arweave | Decentralized storage |
+| Backend | Node.js / TypeScript | API and oracle integration |
+| Smart Contracts | Solidity (OpenZeppelin) | On-chain modules |
+| Frontend | React + Tailwind + Wagmi | Reputation dashboard |
+| Automation | n8n | Issuance, validation, and governance flows |
+| Identity | ENS / DID / Lens Protocol | Decentralized identity linking |
 
 ---
 
-## 🚀 Como Executar (Versão Dev)
+## 🚀 How to Run (Dev Version)
 
-### Pré-requisitos
+### Prerequisites
 
 - Node.js >= 22
 - yarn
 - Hardhat
-- Conta em rede de teste (Arbitrum Sepolia)
+- Testnet account (Arbitrum Sepolia)
 
-### Instalação
+### Installation
 
-````bash
+```bash
 git clone https://github.com/bertux/CalangoHackTeam-ETH-LATAM-Hackathon-2025
 cd CalangoHackTeam-ETH-LATAM-Hackathon-2025
 yarn install
+```
 
-### Compilar e testar contratos
+### Compile and test contracts
 
 ```bash
 yarn compile
 yarn test
-````
+```
 
 ### Deploy contracts on local blockchain
 
@@ -141,7 +142,7 @@ yarn deploy
 yarn verify
 ```
 
-### Start local User Interface (opcional)
+### Start local User Interface (optional)
 
 ```bash
 yarn start
@@ -156,9 +157,9 @@ yarn vercel
 
 ---
 
-## 🧠 Estrutura de Dados (simplificada)
+## 🧠 Data Structure (simplified)
 
-Cada **Trust Capsule** contém:
+Each **Trust Capsule** contains:
 
 ```json
 {
@@ -171,28 +172,28 @@ Cada **Trust Capsule** contém:
   "metadata": {
     "type": "agreement",
     "category": "governance",
-    "description": "Registro verificável de deliberação DAO."
+    "description": "Verifiable record of a DAO deliberation."
   }
 }
 ```
 
 ---
 
-## 🔗 Integrações
+## 🔗 Integrations
 
-- **n8n** → automação de fluxo (emissão automática de cápsulas)
-- **Snapshot / Tally** → registro de votações e governança
-- **Safe / Gnosis** → ancoragem de transações multiassinadas
-- **CalangoFlux Agents** → interoperabilidade com agentes IA
-- **ENS / Lens / Ceramic** → vinculação de identidades descentralizadas
+- **n8n** → workflow automation (automatic capsule issuance)
+- **Snapshot / Tally** → voting and governance registration
+- **Safe / Gnosis** → anchoring of multi-signature transactions
+- **CalangoFlux Agents** → interoperability with AI agents
+- **ENS / Lens / Ceramic** → linking of decentralized identities
 
 ---
 
-## 🧩 Licença
+## 🧩 License
 
-Este projeto é distribuído sob a **Licença MIT**, promovendo transparência, reuso e contribuição aberta.
+This project is distributed under the **MIT License**, promoting transparency, reuse, and open contribution.
 
-© 2025 CalangoFlux — Todos os direitos reservados sob princípios de ética, impacto e inovação sustentável.
+© 2025 CalangoFlux — All rights reserved under the principles of ethics, impact, and sustainable innovation.
 
 ---
 
@@ -200,9 +201,9 @@ Este projeto é distribuído sob a **Licença MIT**, promovendo transparência, 
 
 ---
 
-## ✳️ Contato
+## ✳️ Contact
 
-Desenvolvido por **CalangoFlux** and 💚Pill Brasil
+Developed by **CalangoFlux** and 💚Pill Brasil
 
 🌍 [https://calangoflux.xyz]
 
@@ -212,4 +213,4 @@ Desenvolvido por **CalangoFlux** and 💚Pill Brasil
 
 ---
 
-> “Trust Capsule — confiança verificável para a nova era das relações digitais.”
+> “Trust Capsule — verifiable trust for the new era of digital relationships.”
