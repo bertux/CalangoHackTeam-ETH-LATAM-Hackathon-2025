@@ -8,12 +8,12 @@ contract SE2NFT is ERC721Enumerable {
     uint256 public tokenIdCounter;
     mapping(uint256 tokenId => string) public tokenURIs;
     string[] public uris = [
-        "QmVHi3c4qkZcH3cJynzDXRm5n7dzc9R9TUtUcfnWQvhdcw", // Zebra
-        "QmfVMAmNM1kDEBYrC2TPzQDoCRFH6F5tE1e9Mr4FkkR5Xr", // Buffalo
-        "QmcvcUaKf6JyCXhLD1by6hJXNruPQGs3kkLg2W1xr7nF1j" // Rhino
+        "bafkreiez4w27rc5kwky77hghlkxcrrvvyrqnjwst4kvje5kqhcbzxjtxjq",
+        "bafkreifg4qp6epslxvd2t2h5tn4724advvqbj4fr3xfp2qp6udz6do72wa", 
+        "bafkreig65u6osgozrxddf7si6pxvii5paeln4xssyvnb7dxsaeloehanpy"
     ];
 
-    constructor() ERC721("SE2-ERC721-NFT", "SE2NFT") {}
+    constructor() ERC721("Trust Capsule NFT", "TCNFT") {}
 
     function _baseURI() internal pure override returns (string memory) {
         return "https://ipfs.io/ipfs/";
