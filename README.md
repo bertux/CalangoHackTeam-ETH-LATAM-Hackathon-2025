@@ -1,100 +1,201 @@
-# 🏗 Scaffold-ETH 2
+# 🪶 Trust Capsule
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+**Protocolo de Confiança Verificável para a Nova Era das Relações Digitais**
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+O **Trust Capsule** é um protocolo experimental desenvolvido para registrar, verificar e proteger interações digitais entre agentes, humanos e sistemas automatizados na Web3.
+Sua função é simples e essencial: **transformar confiança em um ativo verificável**.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+---
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## 🌐 Visão Geral
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+O **Trust Capsule** atua como uma *cápsula de confiança*, armazenando evidências imutáveis de ações, decisões, acordos e reputações.
+Ele combina dados **on-chain** (registros criptográficos) e **off-chain** (contexto, intenções e metadados), garantindo rastreabilidade, integridade e interoperabilidade.
 
-## Requirements
+O objetivo é criar um padrão aberto para confiança digital — aplicável tanto a **DAOs**, **dApps** e **sistemas de governança**, quanto a organizações que desejam operar com transparência verificável.
 
-Before you begin, you need to install the following tools:
+---
 
-- [Node (>= v20.18.3)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+## ⚙️ Arquitetura Técnica
 
-## Quickstart
+O sistema é dividido em três camadas interdependentes:
 
-To get started with Scaffold-ETH 2, follow the steps below:
+### 1. Camada de Registro (On-chain)
+- Gera hashes das evidências em redes compatíveis com **EVM** (Ethereum, Arbitrum, Base, Polygon).
+- Usa padrões **ERC-721** para criação de cápsulas NFT (Trust Capsules).
+- Registra tempo, origem e integridade da interação.
 
-1. Install dependencies if it was skipped in CLI:
+### 2. Camada de Contexto (Off-chain)
+- Armazena metadados e informações contextuais via **IPFS** ou **Arweave**.
+- Descreve o propósito, autoria e natureza da ação ou acordo.
+- Mantém privacidade seletiva (dados sensíveis não expostos publicamente).
+
+### 3. Camada de Reputação
+- Consolida evidências e interações em um **Trust Score** dinâmico.
+- Pode emitir *Trust Badges* (NFTs de reputação) baseados em comportamento e verificações.
+- Integra-se com protocolos de governança (Snapshot, Tally, Safe).
+
+---
+
+## 💡 Problema que Resolve
+
+Mesmo em sistemas descentralizados, a confiança entre partes ainda depende de interpretação subjetiva.
+O **Trust Capsule** elimina essa lacuna ao introduzir uma camada objetiva e verificável de confiança, resolvendo:
+
+- Baixa rastreabilidade de intenções e autorias;
+- Falta de métricas reputacionais consistentes;
+- Desconexão entre contexto (off-chain) e registro (on-chain).
+
+---
+
+## 🧩 Casos de Uso
+
+- **Governança Descentralizada:** registro verificável de votos, decisões e quóruns.
+- **Colaborações Web3:** evidência de entregas, coautorias e contribuições.
+- **Projetos ESG e impacto:** rastreabilidade de compromissos e indicadores sustentáveis.
+- **Sistemas reputacionais:** criação de NFTs de confiança e histórico de interações.
+- **Letramento digital:** certificações de participação e aprendizado verificáveis.
+
+---
+
+## 🧭 Pilares Éticos e Sustentáveis
+
+O Trust Capsule segue integralmente os princípios **ESG**, **ODS** e **NetZero**, com compromisso de:
+- Transparência e interoperabilidade;
+- Neutralidade de carbono em infraestrutura (via Arweave/Polygon Green);
+- Governança aberta e participativa;
+- Código sob licença livre, auditável e replicável.
+
+---
+
+## 🔐 Estrutura do Repositório
+trust-capsule/
+│
+├── contracts/          # Contratos Solidity (ERC721 / TrustLogic)
+├── core/               # Módulos de validação e lógica off-chain
+├── api/                # Endpoints de integração (Node.js / FastAPI)
+├── ui/                 # Interface de visualização e dashboard reputacional
+├── docs/               # Documentação técnica e diagramas
+├── tests/              # Testes unitários e de integração
+└── README.md           # Este documento
+
+
+---
+
+## 🛠️ Stack Técnica
+
+| Camada | Tecnologia | Função |
+|--------|-------------|--------|
+| Blockchain | Ethereum / Arbitrum / Base | Registro de cápsulas |
+| Storage | IPFS / Arweave | Armazenamento descentralizado |
+| Backend | Node.js / TypeScript | API e integração com oráculos |
+| Smart Contracts | Solidity (OpenZeppelin) | Módulos on-chain |
+| Frontend | React + Tailwind + Wagmi | Dashboard de reputação |
+| Automação | n8n | Fluxos de emissão, validação e governança |
+| Identidade | ENS / DID / Lens Protocol | Vinculação de identidade descentralizada |
+
+---
+
+## 🚀 Como Executar (Versão Dev)
+
+### Pré-requisitos
+- Node.js >= 18
+- npm ou yarn
+- Hardhat
+- Conta em rede de teste (Goerli, Base Sepolia ou Arbitrum Sepolia)
+
+### Instalação
+
+```bash
+git clone https://github.com/calangoFlux/trust-capsule.git
+cd trust-capsule
+npm install
+
+### Compilar e testar contratos
+
+```bash
+npx hardhat compile
+npx hardhat test
 
 ```
-cd my-dapp-example
-yarn install
-```
 
-2. Run a local network in the first terminal:
+### Deploy local
 
-```
-yarn chain
-```
-
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/hardhat/hardhat.config.ts`.
-
-3. On a second terminal, deploy the test contract:
+```bash
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
 
 ```
-yarn deploy
+
+### Interface (opcional)
+
+```bash
+cd ui
+npm install
+npm run dev
+
 ```
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+---
 
-4. On a third terminal, start your NextJS app:
+## 🧠 Estrutura de Dados (simplificada)
+
+Cada **Trust Capsule** contém:
+
+```json
+{
+  "id": "TC-0x...",
+  "issuer": "0x123...",
+  "recipient": "0xABC...",
+  "contextURI": "ipfs://bafy...",
+  "timestamp": 1731234567,
+  "trustLevel": 0.89,
+  "metadata": {
+    "type": "agreement",
+    "category": "governance",
+    "description": "Registro verificável de deliberação DAO."
+  }
+}
 
 ```
-yarn start
-```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+---
 
-Run smart contract test with `yarn hardhat:test`
+## 🔗 Integrações
 
-- Edit your smart contracts in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
+- **n8n** → automação de fluxo (emissão automática de cápsulas)
+- **Snapshot / Tally** → registro de votações e governança
+- **Safe / Gnosis** → ancoragem de transações multiassinadas
+- **CalangoFlux Agents** → interoperabilidade com agentes IA
+- **ENS / Lens / Ceramic** → vinculação de identidades descentralizadas
 
-## 🚀 Setup ERC-721 NFT Extension
+---
 
-This extension introduces an ERC-721 token contract and demonstrates how to use it, including getting the total supply and holder balance, listing all NFTs from the collection and NFTs from the connected address, and how to transfer NFTs.
+## 🧩 Licença
 
-The ERC-721 Token Standard introduces a standard for Non-Fungible Tokens ([EIP-721](https://eips.ethereum.org/EIPS/eip-721)), in other words, each token is unique.
+Este projeto é distribuído sob a **Licença MIT**, promovendo transparência, reuso e contribuição aberta.
 
-The ERC-721 token contract is implemented using the [ERC-721 token implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol) from OpenZeppelin.
+© 2025 CalangoFlux — Todos os direitos reservados sob princípios de ética, impacto e inovação sustentável.
 
-The ERC-721 token implementation uses the [ERC-721 Enumerable extension](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Enumerable.sol) from OpenZeppelin to list all tokens from the collection and all the tokens owned by an address. You can remove this if you plan to use an indexer, like a Subgraph or Ponder ([extensions available](https://scaffoldeth.io/extensions)).
+---
 
-### Setup
+## 🧭 Roadmap
 
-Deploy your contract running ```yarn deploy```
+---
 
-### Interact with the NFT
+## ✳️ Contato
 
-Start the front-end with ```yarn start``` and go to the _/erc721_ page to interact with your deployed ERC-721 token.
+Desenvolvido por **CalangoFlux**
 
-You can check the code at ```packages/nextjs/app/erc721```.
+🌍 [https://calangoflux.xyz]
+
+📧 [calangoflux](mailto:contato@calangoflux.com)@proton.me
+
+🪩 Ethical innovation for a verifiable digital future.
+
+---
+
+> “Trust Capsule — confiança verificável para a nova era das relações digitais.”
+>
 
 
-## Documentation
-
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
-
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
